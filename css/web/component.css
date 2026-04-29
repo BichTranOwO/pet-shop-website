@@ -1,0 +1,306 @@
+/* ======================   IMPORT FONT====================== */
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Quicksand:wght@500;700&family=Comfortaa:wght@300;400&display=swap');
+
+/* ======================   ROOT - DESIGN SYSTEM ====================== */
+:root {
+    /* BACKGROUND */
+    --bg-main: #FAF3E0;
+    /* nền chính toàn web */
+    --bg-white: #FFFFFE;
+    /* header, card, form */
+
+    /* PRIMARY */
+    --primary-color: #6C4ED9;
+    /* tím chủ đạo */
+    --primary-hover: #5A3FC0;
+    /* hover button */
+
+    /* BUTTON */
+    --button-color: #6C4ED9;
+    --button-hover: #5A3FC0;
+
+    /* TEXT */
+    --text-dark: #2F2F2F;
+    /* chữ chính */
+    --text-light: #FFFFFE;
+    /* chữ trên nền đậm */
+    --text-title: #6C4ED9;
+    /* chữ tiêu đề lớn */
+
+    /* PRICE */
+    --price-color: #564949;
+    /* màu giá sản phẩm */
+    /* BORDER */
+    --border-color: #2F2F2F;
+    /* viền card */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-card: 0px 4px 12px #6C4ED9;
+    /* bóng tím cho card */
+    /* FONT */
+    --font-title: 'Coiny';
+    /* tiêu đề cute */
+    --font-heading: 'Quicksand', sans-serif;
+    /* heading/menu */
+    --font-body: 'Comfortaa', sans-serif;
+    /* nội dung */
+
+
+}
+
+/* ================= HEADER ================= */
+/* HEADER FULL WIDTH */
+.header {
+    background: var(--bg-white);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* TOP */
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+}
+
+.header__logo img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* SEARCH */
+.header__search {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 700px;
+    flex: 1;
+}
+
+.header__search i {
+    position: absolute;
+    left: 10px;
+    color: #6C4ED9;
+}
+
+.header__search-input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 8px 15px;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    box-shadow: 0 0 5px var(--button-color), 0 0 0 10px rgba(108, 78, 217, 0.1);
+    transition: .3s ease;
+    /* padding: 
+    border-radius: 20px;
+    border: 1px solid #ccc; */
+}
+
+/* ACTIONS */
+.header__actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* BUTTON */
+.header__btn {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--bg-white);
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.header__btn:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+    box-shadow: rgb(93 24 220) 0px 7px 15px 0px;
+
+}
+
+.header__btn:active {
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 100ms;
+}
+
+/* ===== DROPDOWN ===== */
+.header__dropdown {
+    font-family: var(--font-heading);
+    background: var(--bg-main) !important;
+    border-radius: 20px !important;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    padding: 10px !important;
+
+}
+
+/* ===== ITEM ===== */
+.header__dropdown-item {
+    background: var(--bg-white) !important;
+    font-size: 20px;
+    /* chữ to giống mẫu */
+    font-weight: 500 !important;
+    margin-bottom: 5px !important;
+    color: var(--primary-color) !important;
+    border-radius: 20px !important;
+    text-align: center;
+    transition: 0.3s;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+/* HOVER */
+.header__dropdown-item:hover {
+    background: var(--primary-color) !important;
+    color: var(--text-light) !important;
+    box-shadow: rgb(93 24 220) 0px 5px 10px 0px;
+}
+
+/* NAV */
+.header__nav {
+    background: var(--bg-main);
+    padding: 10px 0;
+    height: 45px;
+
+}
+
+/* MENU */
+.header__menu {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+}
+
+.header__link {
+    font-family: var(--font-heading);
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    position: relative;
+}
+
+/* 🔥 GẠCH CHÂN */
+.header__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: var(--primary-color);
+    transition: 0.3s;
+}
+
+.header__cart {
+    position: relative;
+}
+
+/* badge số */
+.header__cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+
+    background: red;
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.header__link:hover::after {
+    width: 100%;
+}
+
+/* ================= FOOTER ================= */
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 50px;
+    font-family: var(--font-body);
+}
+
+.footer__content {
+    background-image: url('/assets/images/footer/nen-footer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 27px 50px;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* CỘT */
+.footer__col {
+    max-width: 400px;
+}
+
+.footer__title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+/* LOGO */
+.footer__logo {
+    width: 220px;
+}
+
+.footer__slogan {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* ICON */
+.footer__col i {
+    margin-right: 8px;
+}
+
+.footer__social {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer__social:hover {
+    color: #FFD700;
+    /* vàng nhẹ */
+    transform: translateX(5px);
+}
+
+/* ===== BOTTOM ===== */
+.footer__bottom {
+    text-align: center;
+    padding: 10px;
+    color: #333;
+}
