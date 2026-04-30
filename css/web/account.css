@@ -1,0 +1,209 @@
+/* ======================   IMPORT FONT====================== */
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Quicksand:wght@500;700&family=Comfortaa:wght@300;400&display=swap');
+
+/* ======================   ROOT - DESIGN SYSTEM ====================== */
+:root {
+    /* BACKGROUND */
+    --bg-main: #FAF3E0;
+    /* nền chính toàn web */
+    --bg-white: #FFFFFE;
+    /* header, card, form */
+
+    /* PRIMARY */
+    --primary-color: #6C4ED9;
+    /* tím chủ đạo */
+    --primary-hover: #5A3FC0;
+    /* hover button */
+    --secondary-color: #A463F2;
+    /* màu phụ */
+    /* BUTTON */
+    --button-color: #6C4ED9;
+    --button-hover: #5A3FC0;
+    --button-phu: rgba(167, 87, 233, 0.25);
+
+    /* TEXT */
+    --text-dark: #2F2F2F;
+    /* chữ chính */
+    --text-light: #FFFFFE;
+    /* chữ trên nền đậm */
+    --text-title: #6C4ED9;
+    /* chữ tiêu đề lớn */
+
+    /* PRICE */
+    --price-color: #564949;
+    /* màu giá sản phẩm */
+    /* BORDER */
+    --border-color: #2F2F2F;
+    /* viền card */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-card: #6C4ED9;
+    --border-card: rgba(167, 87, 233, 0.25);
+
+    /* FONT */
+    --font-title: 'Coiny';
+    /* tiêu đề cute */
+    --font-heading: 'Quicksand', sans-serif;
+    /* heading/menu */
+    --font-body: 'Comfortaa', sans-serif;
+    /* nội dung */
+
+
+}
+
+.account-page {
+    /* padding-top:180px; */
+    padding: 180px 15px !important;
+    max-width: 1400px;
+    margin: 0 !important;
+
+}
+
+.account-page__title {
+    font-family: var(--font-title);
+    color: var(--text-title);
+    font-size: 2.3rem;
+    text-transform: uppercase;
+}
+
+.account-sidebar {
+    background-color: var(--bg-white);
+    overflow: hidden;
+    border: 1px solid var(--border-card);
+    box-shadow: 0px 4px 10px var(--shadow-color);
+    border-radius: 30px;
+
+}
+
+.account-sidebar__item {
+    color: var(--text-dark) !important;
+    text-align: left !important;
+    padding: 15px 20px !important;
+    border-radius: 0 !important;
+    font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+.account-sidebar__item.active {
+    background-color: #EBD9FC !important;
+    color: var(--text-dark) !important;
+}
+
+/* Nút Đăng xuất */
+#btnDangXuat {
+    background-color: var(--secondary-color);
+    /* border: 2px solid var(--border-color); */
+    color: var(--text-light);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 3px 4px 0px 1px var(--shadow-card);
+}
+
+#btnDangXuat:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    transform: translateY(-3px);
+    border: none;
+    box-shadow: 1px 2px 0px var(--shadow-card);
+}
+
+#btnDangXuat:active {
+    transform: translateY(0);
+    box-shadow: 1px 2px 0px var(--shadow-card);
+}
+
+/* Nội dung bên phải */
+.account-content {
+    background-color: var(--bg-white);
+    border-radius: 30px;
+    padding: 40px;
+    min-height: 400px;
+    border: 1px solid var(--border-card);
+    box-shadow: 0px 4px 10px var(--shadow-card);
+}
+
+.account-content__title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.account-form__label {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.account-form__input {
+    outline: none;
+    border: 2px solid var(--border-color) !important;
+    box-shadow: 3px 4px 0px 0px #6C4ED9 !important;
+    padding: 12px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.account-form__input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 1px 2px 0px var(--shadow-card);
+    transform: translateY(4px);
+}
+
+/* Nút Cập nhật (Sử dụng ID hoặc class tùy bạn đặt) */
+#btnCapNhat {
+    background-color: var(--button-color);
+    /* Màu tím */
+    border: 2px solid var(--border-color);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    color: var(--text-light);
+    box-shadow: 4px 4px 0px 0px #6C4ED9;
+    cursor: pointer;
+}
+
+#btnCapNhat:hover {
+    background-color: var(--primary-hover);
+    transform: translate(-2px, -2px);
+    /* Nhích lên trên bên trái */
+    box-shadow: 6px 6px 0px 0px var(--shadow-card);
+    /* Bóng dày hơn khi hover */
+}
+
+#btnCapNhat:active {
+    transform: translate(2px, 2px);
+    /* Lún xuống khi nhấn */
+    box-shadow: 0px 0px 0px 0px var(--shadow-card);
+}
+
+/* Nút Hủy (Nút phụ - thường dùng màu nhạt hoặc viền không bóng quá đậm) */
+#btnHuy {
+    background-color: #f1f1f1;
+    /* Một màu xám nhẹ */
+    border: 2px solid var(--border-color);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    color: var(--text-dark);
+    box-shadow: 4px 4px 0px 0px #ccc;
+    /* Bóng màu xám cho nhẹ nhàng */
+    cursor: pointer;
+}
+
+#btnHuy:hover {
+    background-color: #e2e2e2;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px #ccc;
+}
+
+#btnHuy:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px #ccc;
+}

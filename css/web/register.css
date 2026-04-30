@@ -1,0 +1,188 @@
+/* ======================   IMPORT FONT====================== */
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Quicksand:wght@500;700&family=Comfortaa:wght@300;400&display=swap');
+
+/* ======================   ROOT - DESIGN SYSTEM ====================== */
+:root {
+    /* BACKGROUND */
+    --bg-main: #FAF3E0;
+    /* nền chính toàn web */
+    --bg-white: #FFFFFE;
+    /* header, card, form */
+
+    /* PRIMARY */
+    --primary-color: #6C4ED9;
+    /* tím chủ đạo */
+    --primary-hover: #5A3FC0;
+    /* hover button */
+
+    /* BUTTON */
+    --button-color: #6C4ED9;
+    --button-hover: #5A3FC0;
+    --button-phu: rgba(167, 87, 233, 0.25);
+
+    /* TEXT */
+    --text-dark: #2F2F2F;
+    /* chữ chính */
+    --text-light: #FFFFFE;
+    /* chữ trên nền đậm */
+    --text-title: #6C4ED9;
+    /* chữ tiêu đề lớn */
+
+    /* PRICE */
+    --price-color: #564949;
+    /* màu giá sản phẩm */
+    /* BORDER */
+    --border-color: #2F2F2F;
+    /* viền card */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-card: #6C4ED9;
+    --border-card: rgba(167, 87, 233, 0.25);
+
+    /* FONT */
+    --font-title: 'Coiny';
+    /* tiêu đề cute */
+    --font-heading: 'Quicksand', sans-serif;
+    /* heading/menu */
+    --font-body: 'Comfortaa', sans-serif;
+    /* nội dung */
+
+
+}
+
+body {
+    background-image: url('/assets/images/nen-dangnhap.png');
+}
+
+/* ====================== ANIMATION DEFINITION ====================== */
+
+@keyframes loadTrangWeb {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+        /* Bắt đầu: mờ, nhỏ, hơi thấp */
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        /* Kết thúc: rõ nét, kích thước chuẩn */
+    }
+}
+
+/* Hiệu ứng trượt nhẹ cho các ô nhập liệu (tùy chọn) */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-card {
+    max-width: 1120px;
+    width: 100%;
+    background: var(--bg-white);
+    box-shadow: var(--shadow-card);
+    border-radius: 30px;
+    border: 2px solid var(--border-card);
+    overflow: hidden;
+    animation: loadTrangWeb 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.auth-card__form {
+    animation: slideUp 0.5s ease-out 0.4s both;
+    /* delay 0.4s */
+    padding: 40px;
+}
+
+.auth-card__title {
+    font-family: var(--font-title);
+    color: var(--text-title);
+    font-size: 2.3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form-label {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.auth-card__form .form-control {
+    outline: none;
+    border: 2px solid var(--border-color);
+    box-shadow: 3px 4px 0px 1px var(--shadow-card);
+    padding: 12px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 1px 2px 0px var(--shadow-card);
+    transform: translateY(4px);
+}
+
+#btnDangKy {
+    background-color: var(--button-phu);
+    border: 2px solid var(--border-color);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 3px 4px 0px 1px var(--shadow-card);
+
+}
+
+#btnDangKy:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    transform: translateY(-3px);
+    border: none;
+    box-shadow: 1px 2px 0px var(--shadow-card);
+
+}
+
+#btnDangKy:active {
+    transform: translateY(0);
+    box-shadow: 1px 2px 0px var(--shadow-card);
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 767.98px) {
+    .auth-card__image-container {
+        height: 250px;
+        /* Trên mobile ảnh nằm trên và có chiều cao cố định */
+    }
+
+    .auth-card__form {
+        padding: 2rem;
+    }
+}
+
+.auth-card__image-container {
+    display: flex;
+    align-items: stretch;
+    animation: slideUp 0.5s ease-out 0.2s both;
+    /* delay 0.2s */
+}
+
+.auth-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.auth-card p {
+    font-family: var(--font-body);
+    text-align: center;
+    margin-top: 20px;
+}

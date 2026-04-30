@@ -178,7 +178,23 @@
     color: var(--text-light) !important;
     box-shadow: rgb(93 24 220) 0px 5px 10px 0px;
 }
+/* Hiệu ứng trượt và mờ dần cho Dropdown */
+.dropdown-menu.header__dropdown {
+    display: block; /* Ép hiển thị để quản lý bằng opacity */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px); /* Đẩy menu xuống 20px */
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    pointer-events: none; /* Không cho click khi đang ẩn */
+}
 
+/* Khi nhấn vào nút (Bootstrap thêm class .show vào menu) */
+.dropdown-menu.header__dropdown.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); /* Trượt về vị trí cũ */
+    pointer-events: auto;
+}
 /* NAV */
 .header__nav {
     background: var(--bg-main);
@@ -203,7 +219,6 @@
     position: relative;
 }
 
-/* 🔥 GẠCH CHÂN */
 .header__link::after {
     content: "";
     position: absolute;
@@ -240,7 +255,7 @@
 }
 
 /* ================= FOOTER ================= */
-/* ===== FOOTER ===== */
+
 .footer {
     margin-top: 50px;
     font-family: var(--font-body);

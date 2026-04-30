@@ -10,7 +10,7 @@ function loadComponent(id, filePath) {
 }
 
 // load header
-loadComponent("header-container", "./components/header.html");
+loadComponent("header", "./components/header.html");
 
 // load footer
-loadComponent("footer-container", "./components/footer.html");
+loadComponent("footer", "./components/footer.html");

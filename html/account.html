@@ -1,1 +1,124 @@
-<!-- này là trang sau khi đăng nhập thành công  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản của tôi</title>
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/web/component.css">
+    <link rel="stylesheet" href="/css/web/account.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="container-fuild">
+        <div id="header"></div>
+        <div class="row account-page ">
+            <nav class="p-3"
+                style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                aria-label="breadcrumb ">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-dark text-decoration-none" href="/html/index.html">Trang
+                            chủ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Tài khoản</li>
+                </ol>
+            </nav>
+            <h1 class="account-page__title mb-4">Tài khoản của tôi</h1>
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="account-sidebar shadow-sm">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                        <button class="nav-link active account-sidebar__item" id="tab-profile" data-bs-toggle="pill"
+                            data-bs-target="#content-profile" type="button" role="tab">
+                            <i class="fa-regular fa-circle-user me-2"></i> Thông tin cá nhân
+                        </button>
+                        <button class="nav-link account-sidebar__item" id="tab-orders" data-bs-toggle="pill"
+                            data-bs-target="#content-orders" type="button" role="tab">
+                            <i class="fa-solid fa-box-archive me-2"></i> Đơn hàng của bạn
+                        </button>
+                        <button class="nav-link account-sidebar__item" id="tab-password" data-bs-toggle="pill"
+                            data-bs-target="#content-password" type="button" role="tab">
+                            <i class="fa-solid fa-lock me-2"></i> Đổi mật khẩu
+                        </button>
+                    </div>
+                </div>
+
+                <button id="btnDangXuat" class="btn account-sidebar__logout w-100 mt-3" href="/html/login.html">ĐĂNG
+                    XUẤT</button>
+            </div>
+
+            <div class="col-md-8 col-lg-9">
+                <div class="tab-content account-content shadow-sm" id="v-pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="content-profile" role="tabpanel">
+                        <h3 class="account-content__title">Thông tin cá nhân</h3>
+                        <form class="account-form mt-4">
+                            <div class="mb-3">
+                                <label class="account-form__label">Họ và tên <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control account-form__input">
+                            </div>
+                            <div class="mb-3">
+                                <label class="account-form__label">Số điện thoại <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control account-form__input">
+                            </div>
+                            <div class="mb-3">
+                                <label class="account-form__label">Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control account-form__input">
+                            </div>
+                            <div class="account-form__actions mt-4 text-end">
+                                <button id="btnHuy" type="button" class="btn account-form__btn--cancel me-2">Hủy</button>
+
+                                <button id="btnCapNhat" type="submit" class="btn account-form__btn--update">Cập nhật thông tin</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="content-orders" role="tabpanel">
+                        <h3 class="account-content__title">Đơn hàng của bạn</h3>
+                        <img class="img-fluid" src="/assets/icons/icon-trong.svg" alt="">
+                        <p class="mt-4">Bạn hiện tại chưa có đơn hàng nào.</p>
+                    </div>
+
+                    <div class="tab-pane fade" id="content-password" role="tabpanel">
+                        <h3 class="account-content__title">Đổi mật khẩu</h3>
+                        <form class="account-form mt-4">
+                    <div class="mb-4">
+                        <label class="account-form__label">Mật khẩu hiện tại <span class="text-danger">*</span></label>
+                        <input type="password" class="form-control account-form__input">
+                    </div>
+                    <div class="mb-4">
+                        <label class="account-form__label">Mật khẩu mới <span class="text-danger">*</span></label>
+                        <input type="password" class="form-control account-form__input">
+                    </div>
+                    <div class="mb-4">
+                        <label class="account-form__label">Xác nhận mật khẩu mới <span class="text-danger">*</span></label>
+                        <input type="password" class="form-control account-form__input">
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-5">
+                        <button type="button" id="btnHuy" class="btn me-3">Hủy</button>
+                        <button type="submit" id="btnCapNhat" class="btn">Đổi mật khẩu</button>
+                    </div>
+                </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="footer"></div>
+    </div>
+    <script src="/js/web/loadComponent.js"></script>
+    <script src="/js/bootstrap/bootstrap.bundle.js"></script>
+    </script>
+</body>
+
+</html>

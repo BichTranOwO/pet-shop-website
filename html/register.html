@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <!-- <link rel="stylesheet" href="/css/web/component.css"> -->
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/web/register.css">
+</head>
+<body>
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+        <div class="auth-card row">
+            <div class="col-md-6 auth-card__form">
+                <h2 class="auth-card__title mb-4">Đăng ký tài khoản</h2>
+                <form action="/register" method="POST">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Tên đăng nhập</label>
+                        <span class="text-danger">*</span>
+                        <input type="text" class="form-control" id="txtTendn" name="username" placeholder="Nguyễn Văn A" required>
+                    </div>
+                     <div class="mb-3">
+                        <label for="phone" class="form-label">Số Điện Thoại</label>
+                        <span class="text-danger">*</span>
+                        <input type="text" class="form-control" id="sdt" name="phone" placeholder="0987643213" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <span class="text-danger">*</span>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="abc@gmail.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Mật khẩu</label>
+                        <span class="text-danger">*</span>
+
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn w-100 mt-3" id="btnDangKy">Đăng ký</button>
+                </form>
+                <p class="mt-3 text-center">
+                    Đã có tài khoản? <a class="text-dark" href="/html/login.html">Đăng nhập ngay</a>
+                </p>
+            </div>
+            <div class="col-md-6 auth-card__image-container p-0">
+                <img src="/assets/images/dangky.jpg" alt="Đăng ký" class="auth-card__image">
+            </div>
+        </div>
+    </div>
+<script src="/js/bootstrap/bootstrap.bundle.js"></script>
+</body>
+</html>
