@@ -1,1 +1,672 @@
-<!-- Đây là code sản phẩm dành cho chó, bạn có thể thêm các sản phẩm khác vào đây bằng cách sao chép và chỉnh sửa phần mã HTML bên dưới. Hãy chắc chắn rằng bạn đã liên kết đúng với các tệp CSS và JavaScript cần thiết để trang web hoạt động tốt. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thức ăn cho chó</title>
+    <link rel="stylesheet" href="../css/web/component.css">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .product-card {
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-card) !important;
+        }
+
+        .product-img {
+            height: 230px;
+            object-fit: contain;
+        }
+
+        .product-price {
+            color: var(--price-color);
+        }
+
+        .btn-primary {
+            background-color: var(--button-color);
+            border-color: var(--button-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--button-hover);
+            border-color: var(--button-hover);
+        }
+
+        .btn-outline-primary {
+            color: var(--button-color);
+            border-color: var(--button-color);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--button-hover);
+            border-color: var(--button-hover);
+        }
+    </style>
+</head>
+<body style="background: var(--bg-main);">
+    <div id="header"></div>
+        <main class="container text-center" style="padding-top: 180px;">
+            <h1 style="color: var(--text-title); font-family: var(--font-title); padding-bottom: 50px;">
+                SẢN PHẨM THỨC ĂN CHO CHÓ
+            </h1>
+        
+            <div class="row">
+                <aside class="col-md-3">
+                    <div style="max-width: 311px; min-height: 769px; background: var(--bg-white); border-radius: 30px; box-shadow: 0 8px 12px rgba(0,0,0,0.25); overflow: hidden;">
+                    
+                        <div class="text-center d-flex align-items-center justify-content-center"
+                            style="
+                                height: 68px;
+                                background: var(--primary-color);
+                                border-top-left-radius: 30px;
+                                border-top-right-radius: 30px;
+                                color: white;
+                                font-family: var(--font-title);
+                                font-size: 36px;">
+                            Lọc sản phẩm
+                        </div>
+                    
+                        <div class="p-4">
+                        
+                            <div class="mb-4 text-start">
+                                <h5 class=" mb-3 text-start">Khoảng giá</h5>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="price1">
+                                    <label class="form-check-label" for="price1">
+                                        Giá dưới 100.000đ
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="price2">
+                                    <label class="form-check-label" for="price2">
+                                        100.000đ - 500.000đ
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="price3">
+                                    <label class="form-check-label" for="price3">
+                                        500.000đ - 1.000.000đ
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="price4">
+                                    <label class="form-check-label" for="price4">
+                                        Giá trên 1.000.000đ
+                                    </label>
+                                </div>
+                            </div>
+                        
+                            <div class="mb-4 text-start">
+                                <h5 class="filter-title mb-3">Thương hiệu</h5>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-ganador">
+                                    <label class="form-check-label" for="brand-ganador">
+                                        Ganador
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-inu-fonti">
+                                    <label class="form-check-label" for="brand-inu-fonti">
+                                        INU Fonti
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-royal-canin">
+                                    <label class="form-check-label" for="brand-royal-canin">
+                                        Royal Canin
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-monge">
+                                    <label class="form-check-label" for="brand-monge">
+                                        Monge
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-smartheart">
+                                    <label class="form-check-label" for="brand-smartheart">
+                                        Smartheart
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-pedigree">
+                                    <label class="form-check-label" for="brand-pedigree">
+                                        Pedigree
+                                    </label>
+                                </div>
+                            
+                            </div>
+
+                            <div class="mb-4 text-start">
+                                <h5 class=" mb-3 text-start">Loại</h5>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="hatkho">
+                                    <label class="form-check-label" for="hatkho">
+                                        Hạt/Đồ khô
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="pate">
+                                    <label class="form-check-label" for="pate">
+                                        Pate/Đồ ướt
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <section class="col-md-9">
+                    <div class="row row-cols-1 row-cols-md-3 g-4" id="product-list">
+                    
+                        <div class="col" id="product-1">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/ganador-dog.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Hạt Ganador Adult Cho Chó Trưởng Thành">
+                            
+                                <div class="card-body text-start d-flex flex-column">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Hạt Ganador Adult Cho Chó Trưởng Thành 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 3kg
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        127.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2 mt-auto">
+                                        <a href="product-detail.html?id=dog-1" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-2">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/dog-Dha.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Hạt Ganador Puppy Cho Chó Con Vị Sữa & DHA">
+                            
+                                <div class="card-body text-start d-flex flex-column">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Hạt Ganador Puppy Cho Chó Con Vị Sữa & DHA 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 3kg
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        169.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2 mt-auto">
+                                        <a href="product-detail.html?id=dog-2" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-3">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/dexinbone.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Bánh Thưởng Cho Chó Dexinbone Hỗ Trợ Sạch Răng">
+                            
+                                <div class="card-body text-start d-flex flex-column">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Bánh Thưởng Cho Chó Dexinbone Hỗ Trợ Sạch Răng
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 150gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        32.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2 mt-auto">
+                                        <a href="product-detail.html?id=dog-3" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-4">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/royal-canin-dog-dha.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Hạt Điều Trị Bệnh Cho Chó Hỗ Trợ Chức Năng Gan Royal Canin">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                    Hạt Điều Trị Bệnh Cho Chó Hỗ Trợ Chức Năng Gan Royal Canin
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 70gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        449.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-4" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-5">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/monge-fresh-dog.jpg"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate MONGE FRESH cho chó loại LON">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                    Pate MONGE FRESH cho chó loại LON
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 400gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        55,000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-5" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-6">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/inu-fonti-xuong-gam-ban-chai.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Bánh Thưởng Cho Chó INU Fonti Xương Gặm Bàn Chải">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Bánh Thưởng Cho Chó INU Fonti Xương Gặm Bàn Chải
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 90gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                    20.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-6" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-7">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/inu-fonti-xuong-gam-nguoi-tuyet.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Bánh Thưởng Cho Chó Xương Gặm Fonti Inu - Người Tuyết">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold mb-4">
+                                        Bánh Thưởng Cho Chó Xương Gặm Fonti Inu - Người Tuyết  
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 90gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        40.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-7" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-8">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/smartheart-beef.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Hạt Cho Chó Trưởng Thành Smartheart Adult Vị Bò Nướng">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Hạt Cho Chó Trưởng Thành Smartheart Adult Vị Bò Nướng
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 3kg
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        155.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-8" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-9">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/smartheart-puppy-beef-milk.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Hạt Smartheart Puppy Beef & Milk cho chó con">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Hạt Smartheart Puppy Beef & Milk cho chó con 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 1.5kg
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        114.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-9" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-10">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/smartheart-pate.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate cho chó SmartHeart lon 400gr dành cho chó trưởng thành">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate cho chó SmartHeart lon 400gr dành cho chó trưởng thành 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 400gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        40.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-10" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-11">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/royal-canin-medium-adult.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Hạt Cho Chó Trưởng Thành Giống Vừa Royal Canin Medium Adult">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Hạt Cho Chó Trưởng Thành Giống Vừa Royal Canin Medium Adult 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 4kg
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        679.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-11" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-12">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/monge-bwild-dog.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate MONGE BWILD cho chó Grain Free Adult">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate MONGE BWILD cho chó Grain Free Adult 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 400gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        45.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-12" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" id="product-13">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/pedigree-dentastix.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Bánh Thưởng / Xương Gặm Cho Chó Pedigree Dentastix">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Bánh Thưởng / Xương Gặm Cho Chó Pedigree Dentastix 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 75gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        35.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-13" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-14">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/royal-canin-mini-starter.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate chó Royal Canin Mini Starter Mother & BabyDog">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate chó Royal Canin Mini Starter Mother & BabyDog 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 195gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        81.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-14" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-15">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/Ganador-ga.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate Cho Chó Mọi Lứa Tuổi Ganador Thịt Gà">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate Cho Chó Mọi Lứa Tuổi Ganador Thịt Gà 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Dog Food <span class="mx-2">-</span> Size: 120gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        15.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=dog-15" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                    <nav class="mt-5">
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item">
+                                <a id="prev-page" class="page-link" href="#">«</a>
+                            </li>
+                        
+                            <li class="page-item active">
+                                <a id="page-1" class="page-link" href="#">1</a>
+                            </li>
+                        
+                            <li class="page-item">
+                                <a id="page-2" class="page-link" href="#">2</a>
+                            </li>
+                        
+                            <li class="page-item">
+                                <a id="next-page" class="page-link" href="#">»</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+        </main>
+    <div id="footer" class="mt-5"></div>
+    <script src="../js/bootsrap/bootstrap.bundle.js"></script>
+    <script src="../js/web/loadComponent.js"></script>
+    <script src="../js/web/product-pagination.js"></script>
+    <script src="../js/web/product-filter-dog.js"></script>
+</body>
+</html>
