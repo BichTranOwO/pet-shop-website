@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thức ăn cho mèo</title>
+    <link rel="stylesheet" href="../css/web/component.css">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .product-card {
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-card) !important;
+        }
+
+        .product-img {
+            height: 230px;
+            object-fit: contain;
+        }
+
+        .product-price {
+            color: var(--price-color);
+        }
+
+        .btn-primary {
+            background-color: var(--button-color);
+            border-color: var(--button-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--button-hover);
+            border-color: var(--button-hover);
+        }
+
+        .btn-outline-primary {
+            color: var(--button-color);
+            border-color: var(--button-color);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--button-hover);
+            border-color: var(--button-hover);
+        }
+    </style>
+</head>
+<body style="background: var(--bg-main);">
+    <div id="header"></div>
+        <main class="container text-center" style="padding-top: 180px;">
+            <h1 style="color: var(--text-title); font-family: var(--font-title); padding-bottom: 50px;">
+                SẢN PHẨM THỨC ĂN CHO MÈO
+            </h1>
+        
+            <div class="row">
+                <aside class="col-md-3">
+                    <div style="max-width: 311px; min-height: 769px; background: var(--bg-white); border-radius: 30px; box-shadow: 0 8px 12px rgba(0,0,0,0.25); overflow: hidden;">
+                    
+                        <div class="text-center d-flex align-items-center justify-content-center"
+                            style="
+                                height: 68px;
+                                background: var(--primary-color);
+                                border-top-left-radius: 30px;
+                                border-top-right-radius: 30px;
+                                color: white;
+                                font-family: var(--font-title);
+                                font-size: 36px;">
+                            Lọc sản phẩm
+                        </div>
+                    
+                        <div class="p-4">
+                        
+                            <div class="mb-4 text-start">
+                                <h5 class=" mb-3 text-start">Khoảng giá</h5>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="price1">
+                                    <label class="form-check-label" for="price1">
+                                        Giá dưới 100.000đ
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="price2">
+                                    <label class="form-check-label" for="price2">
+                                        100.000đ - 500.000đ
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="price3">
+                                    <label class="form-check-label" for="price3">
+                                        500.000đ - 1.000.000đ
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="price4">
+                                    <label class="form-check-label" for="price4">
+                                        Giá trên 1.000.000đ
+                                    </label>
+                                </div>
+                            </div>
+                        
+                            <div class="mb-4 text-start">
+                                <h5 class="mb-3">Thương hiệu</h5>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-ciao">
+                                    <label class="form-check-label" for="brand-ciao">
+                                        Ciao
+                                    </label>
+                                </div>      
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-kit-cat">
+                                    <label class="form-check-label" for="brand-kit-cat">
+                                        Kit Cat
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-monchou">
+                                    <label class="form-check-label" for="brand-monchou">
+                                        Monchou
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-moochie">
+                                    <label class="form-check-label" for="brand-moochie">
+                                        Moochie
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-nekko">
+                                    <label class="form-check-label" for="brand-nekko">
+                                        Nekko
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-happy-choice">
+                                    <label class="form-check-label" for="brand-happy-choice">
+                                        Happy Choice
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-pawsome">
+                                    <label class="form-check-label" for="brand-pawsome">
+                                        Pawsome
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-royal-canin">
+                                    <label class="form-check-label" for="brand-royal-canin">
+                                        Royal Canin
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-snappy-tom">
+                                    <label class="form-check-label" for="brand-snappy-tom">
+                                        Snappy Tom
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-wanpy">
+                                    <label class="form-check-label" for="brand-wanpy">
+                                        Wanpy
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="brand-5plus">
+                                    <label class="form-check-label" for="brand-5plus">
+                                        5Plus
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 text-start">
+                                <h5 class=" mb-3 text-start">Loại</h5>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="hatkho">
+                                    <label class="form-check-label" for="hatkho">
+                                        Hạt/Đồ khô
+                                    </label>
+                                </div>
+                            
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="pate">
+                                    <label class="form-check-label" for="pate">
+                                        Pate/Đồ ướt
+                                    </label>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </aside>
+                <section class="col-md-9">
+                    <div class="row row-cols-1 row-cols-md-3 g-4" id="product-list">
+                    
+                        <div class="col" id="product-1">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/pate-meo-nekko-jelly-70g.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate Mèo Dạng Thạch Nekko Jelly">
+                            
+                                <div class="card-body text-start d-flex flex-column">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate Cho Mèo Dạng Thạch Nekko Jelly
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 70gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        17.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2 mt-auto">
+                                        <a href="product-detail.html?id=cat-1" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-2">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/Thuc-an-dinh-duong-pate-cho-meo-snappy-tom-gourmers-series-70g-shop-vat-nuoi-c0.jpg"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate Cho Mèo Snappy Tom Gourmers">
+                            
+                                <div class="card-body text-start d-flex flex-column">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate Cho Mèo Snappy Tom Gourmers 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 70gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        16.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2 mt-auto">
+                                        <a href="product-detail.html?id=cat-2" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-3">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/thuc-an-cho-meo-truong-thanh-royal-canin-indoor-27-400x400.jpg"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Thức Ăn Cho Mèo Trưởng Thành Royal Canin Indoor 27">
+                            
+                                <div class="card-body text-start d-flex flex-column">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Thức Ăn Cho Mèo Trưởng Thành Royal Canin Indoor 27
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 400gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        132.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2 mt-auto">
+                                        <a href="product-detail.html?id=cat-3" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-4">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/pate-cho-meo-wanpy-happy-100-1.jpg"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate Mèo Wanpy Happy 100">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                    Pate Mèo Wanpy Happy 100
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 70gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        8.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-4" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-5">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/Pate-Meo-Monchou-Balanced.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Reflex Plus Adult Cat Food Salmon">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                    Pate Mèo Monchou Balanced 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 80gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        14.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-5" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-6">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/Pawsome.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate Mèo Pawsome">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate Mèo Pawsome 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 160gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                    25.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-6" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-7">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/5Plus.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate Mèo 5Plus">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold mb-4">
+                                        Pate Mèo 5Plus  
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 70gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        17.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-7" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-8">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/kit-cat-purr-puree.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Súp Thưởng Kit Cat Purr Puree Túi Lớn 40 Tuýp">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Súp Thưởng Kit Cat Purr Puree Túi Lớn 40 Tuýp
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 15gm x 40
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        345.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-8" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col" id="product-9">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/moochie.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Sốt Kem Thưởng Moochie Creamy Cho Mèo">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Sốt Kem Thưởng Moochie Creamy Cho Mèo 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 40gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        14.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-9" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-10">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/pate-meo-ciao.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate Mèo Ciao 6 Vị Thơm Ngon Cho Mèo 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 60gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        12.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-10" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-11">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/snappy-tom.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate Mèo Con Snappy Tom Premium Kitten">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate Mèo Con Snappy Tom Premium Kitten 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 70gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        18.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-11" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-12">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/Moochie-TL.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate Mèo Moochie CAT Thơm Ngon (Thái Lan)">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate Mèo Moochie CAT Thơm Ngon (Thái Lan) 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 70gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        17.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-12" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-13">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/Nekko-Kitten-Mousse.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate Cho Mèo Con Dạng Kem Nekko Kitten Mousse">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate Cho Mèo Con Dạng Kem Nekko Kitten Mousse 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 70gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        17.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-13" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-14">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/Royal-Canin-Kitten-Sterilised.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Hạt Cho Mèo Con Triệt Sản Royal Canin Kitten Sterilised">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Hạt Cho Mèo Con Triệt Sản Royal Canin Kitten Sterilised 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 400gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        112.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-14" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-15">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/Royal-Canin-Diabetic-Feline.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Thức Ăn Hạt Trị Bệnh Cho Mèo Bị Tiểu Đường Royal Canin Diabetic Feline">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Thức Ăn Hạt Cho Mèo Bị Tiểu Đường Royal Canin Diabetic Feline 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 400gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        159.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-15" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-16">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/Royal-Canin-Gastrointestinal.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Thức Ăn Hạt Royal Canin Gastrointestinal">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Thức Ăn Hạt Royal Canin Gastrointestinal 
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 400gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        195.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-16" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-17">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/pate-ciao-thai.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate Cho Mèo Ciao Nhập Khẩu Thái Lan">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate Cho Mèo Ciao Nhập Khẩu Thái Lan
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 40gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        15.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-17" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col" id="product-18">
+                            <div class="card h-100 border-0 shadow-sm rounded-4 product-card">
+                                <img src="../assets/images/products/happy-choice-tuna-jelly.png"
+                                    class="card-img-top p-4 product-img"
+                                    alt="Pate Mèo Happy Choice Cá Ngừ Thạch (Lon 400g)">
+                            
+                                <div class="card-body text-start">
+                                    <h5 class="card-title fs-6 fw-bold">
+                                        Pate Mèo Happy Choice Cá Ngừ Thạch (Lon 400g)  
+                                    </h5>
+                                
+                                    <p class="card-text small mb-1">
+                                        Product: Cat Food <span class="mx-2">-</span> Size: 400gm
+                                    </p>
+                                
+                                    <p class="fw-bold mb-3 product-price">
+                                        26.000 VNĐ
+                                    </p>
+                                
+                                    <div class="d-flex gap-2">
+                                        <a href="product-detail.html?id=cat-18" class="btn btn-outline-primary btn-sm flex-fill">
+                                            Chi tiết sản phẩm
+                                        </a>
+                                        <button type="button" class="btn btn-primary btn-sm flex-fill">
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                    <nav class="mt-5">
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item">
+                                <a id="prev-page" class="page-link" href="#">«</a>
+                            </li>
+                        
+                            <li class="page-item active">
+                                <a id="page-1" class="page-link" href="#">1</a>
+                            </li>
+                        
+                            <li class="page-item">
+                                <a id="page-2" class="page-link" href="#">2</a>
+                            </li>
+                        
+                            <li class="page-item">
+                                <a id="next-page" class="page-link" href="#">»</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+        </main>
+    <div id="footer" class="mt-5"></div>
+    <script src="../js/bootsrap/bootstrap.bundle.js"></script>
+    <script src="../js/web/loadComponent.js"></script>
+    <script src="../js/web/product-pagination.js"></script>
+    <script src="../js/web/product-filter-cat.js"></script>
+</body>
+</html>
