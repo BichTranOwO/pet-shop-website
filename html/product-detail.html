@@ -1,1 +1,193 @@
-<!-- Đây là chi tiết sản phẩm  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="../css/web/component.css">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            background: var(--bg-main);
+            font-family: var(--font-body);
+        }
+
+        .detail-img {
+            max-height: 420px;
+            object-fit: contain;
+        }
+
+        .detail-title {
+            color: var(--text-dark);
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        .detail-price {
+            color: var(--price-color);
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .btn-main {
+            background: var(--button-color);
+            color: var(--text-light);
+        }
+
+        .btn-main:hover {
+            background: var(--button-hover);
+            color: var(--text-light);
+        }
+
+        .section-title {
+            color: var(--text-title);
+            font-family: var(--font-title);
+        }
+    </style>
+</head>
+<body style="background: var(--bg-main);">
+    <div id="header"></div>
+    <main class="container" style="padding-top: 170px;">
+
+        <nav class="mb-3">
+            <a href="index.html" class="text-decoration-none text-dark">
+                Trang chủ
+            </a>
+        
+            <span> &gt; </span>
+        
+            <a id="breadcrumb-category-link" href="#" class="text-decoration-none text-dark">
+                <span id="detail-category">Thức ăn</span>
+            </a>
+        
+            <span> &gt; </span>
+        
+            <span id="breadcrumb-name">
+                Tên sản phẩm
+            </span>
+        </nav>
+
+        <section class="row g-4 align-items-start">
+
+            <!-- Image -->
+            <div class="col-md-5">
+                <div class="bg-white rounded-4 shadow-sm p-4 text-center">
+                    <img id="detail-image"
+                         src=""
+                         alt=""
+                         class="img-fluid detail-img">
+                </div>
+            </div>
+
+            <div class="col-md-7 text-start">
+                <h1 id="detail-name" class="detail-title fs-3">
+                    Tên sản phẩm
+                </h1>
+
+                <p id="detail-price" class="detail-price mb-2">
+                    0 VNĐ
+                </p>
+
+                <p class="mb-1">
+                    <strong>Thương hiệu:</strong>
+                    <span id="detail-brand"></span>
+                </p>
+
+                <p class="mb-1">
+                    <strong>Tình trạng:</strong>
+                    <span class="text-success fw-bold">Còn hàng</span>
+                </p>
+
+                <p id="detail-short-description" class="mt-3">
+                    Mô tả ngắn của sản phẩm.
+                </p>
+
+                <p class="mb-2">
+                    <strong>Số lượng</strong>
+                </p>
+
+                <div class="d-flex align-items-center mb-4">
+                    <button id="decrease-quantity" type="button" class="btn btn-light border">
+                        -
+                    </button>
+
+                    <span id="quantity" class="px-4 py-2 border-top border-bottom bg-white">
+                        1
+                    </span>
+
+                    <button id="increase-quantity" type="button" class="btn btn-light border">
+                        +
+                    </button>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <button type="button" class="btn btn-main px-5 py-2">
+                        MUA NGAY
+                    </button>
+
+                    <button id="add-to-cart-button" type="button" class="btn btn-main px-5 py-2">
+                        THÊM VÀO GIỎ HÀNG
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="mt-5 text-start">
+            <h2 class="section-title mb-3">
+                MÔ TẢ
+            </h2>
+
+            <h5 id="detail-description-title" class="fw-bold">
+                Tên sản phẩm
+            </h5>
+
+            <p id="detail-long-description">
+                Nội dung mô tả chi tiết sản phẩm.
+            </p>
+
+            <p class="mb-1">
+                <strong>Loại sản phẩm:</strong>
+                <span id="detail-product-category"></span>
+            </p>
+
+            <p class="mb-1">
+                <strong>Thương hiệu:</strong>
+                <span id="detail-brand-bottom"></span>
+            </p>
+
+            <p class="mb-1">
+                <strong>Phân loại:</strong>
+                <span id="detail-type"></span>
+            </p>
+
+            <p class="mb-1">
+                <strong>Khối lượng:</strong>
+                <span id="detail-size"></span>
+            </p>
+
+            <p class="mb-1">
+                <strong>Xuất xứ:</strong>
+                <span id="detail-origin"></span>
+            </p>
+
+            <div class="mt-4">
+                <h5 class="fw-bold">
+                    Đối tượng sử dụng:
+                </h5>
+            
+                <p id="detail-target-users" class="mb-0"></p>
+            </div>
+        </section>
+
+    </main>
+    <div id="footer" class="mt-5"></div>
+    <script src="../js/bootsrap/bootstrap.bundle.js"></script>
+    <script src="../js/web/loadComponent.js"></script>
+    <script src="../js/web/product-detail.js"></script>
+</body>
+</html>
