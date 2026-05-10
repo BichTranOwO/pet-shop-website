@@ -1,0 +1,102 @@
+.product-page {
+    background: var(--bg-main);
+    font-family: var(--font-body);
+}
+
+.product-page__main {
+    padding-top: 180px;
+}
+
+.product-page__title {
+    color: var(--text-title);
+    font-family: var(--font-title);
+    padding-bottom: 50px;
+}
+
+/* ================= FILTER ================= */
+
+.product-filter {
+    max-width: 311px;
+    min-height: 769px;
+    background: var(--bg-white);
+    border-radius: 30px;
+    box-shadow: 0 8px 12px var(--shadow-color);
+    overflow: hidden;
+}
+
+.product-filter__heading {
+    height: 68px;
+    background: var(--primary-color);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    color: var(--text-light);
+    font-family: var(--font-title);
+    font-size: 36px;
+}
+
+.product-filter h5 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.product-filter label {
+    font-family: var(--font-body);
+}
+
+/* ================= PRODUCT CARD ================= */
+
+.product-card {
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: var(--shadow-card) !important;
+}
+
+.product-card__img {
+    height: 230px;
+    object-fit: contain;
+}
+
+.product-card .card-title {
+    font-family: var(--font-heading);
+}
+
+.product-card .card-text {
+    font-family: var(--font-body);
+}
+
+.product-card__price {
+    color: var(--price-color);
+    font-family: var(--font-body);
+}
+
+.product-card .btn {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 6px 8px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-primary {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--button-hover);
+    border-color: var(--button-hover);
+}
+
+.btn-outline-primary {
+    color: var(--button-color);
+    border-color: var(--button-color);
+}
+
+.btn-outline-primary:hover {
+    color: var(--text-light);
+    background-color: var(--button-hover);
+    border-color: var(--button-hover);
+}

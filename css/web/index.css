@@ -1,0 +1,116 @@
+   .section--icon {
+       border: 1px;
+       border-radius: 10px;
+       background-color: var(--bg-main);
+       box-shadow: var(--shadow-card);
+       margin: 50px;
+   }
+
+   .section--icon2 {
+       border: 1px;
+       border-radius: 50px;
+       box-shadow: 1px 1px 1px 1px rgb(193, 175, 175);
+       margin: 50px;
+       padding: 10px;
+   }
+
+   .img-brand {
+       max-width: 100%;
+       max-height: 80px;
+       object-fit: contain;
+   }
+
+   .brand-card {
+       height: 120px;
+       background-color: var(--bg-white);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       transition: 0.3s;
+   }
+
+   .btn-primary {
+       background-color: var(--button-color);
+       border-color: var(--button-color);
+   }
+
+   .btn-primary:hover {
+       background-color: var(--button-hover);
+       border-color: var(--button-hover);
+   }
+
+   .btn-outline-primary {
+       color: var(--button-color);
+       border-color: var(--button-color);
+   }
+
+   .btn-outline-primary:hover {
+       background-color: var(--button-hover);
+       border-color: var(--button-hover);
+   }
+
+   .textD {
+       text-decoration: none;
+   }
+   .textD h5 {
+    color: #000;       
+    margin: 20px;   
+    margin-bottom: 50px;
+}
+.section--icon {
+    margin-bottom: 0;
+}
+
+.section--icon img {
+    margin-bottom: 0;
+}
+.carousel-custom__wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-custom__slide {
+    min-width: 100%;
+}
+
+.carousel-custom__img {
+    object-fit: cover;
+    width: 100vw;
+    padding: 50px;
+}
+.section--icon:hover{
+    box-shadow: var(--shadow-card) !important;
+}
+h5:hover{
+     box-shadow: var(--shadow-card) !important;
+}
+h5:hover {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+
+     color: #0d6efd; /* xanh dương Bootstrap */
+    text-shadow: 0 0 8px rgba(13, 110, 253, 0.7);
+}
+.col-md-3:hover .section--icon {
+    background:rgb(218, 218, 240);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+h5{
+     font-family: var(--font-heading);
+}
+p{
+    font-family: var(--font-body);
+}
+.section--icon2:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    background-color: #fff !important;
+    box-shadow: var(--shadow-card) !important;
+}
+
+/* Icon zoom */
+.section--icon2:hover img {
+    transform: scale(1.1);
+}

@@ -59,17 +59,14 @@ body {
     0% {
         opacity: 0;
         transform: scale(0.9) translateY(20px);
-        /* Bắt đầu: mờ, nhỏ, hơi thấp */
     }
 
     100% {
         opacity: 1;
         transform: scale(1) translateY(0);
-        /* Kết thúc: rõ nét, kích thước chuẩn */
     }
 }
 
-/* Hiệu ứng trượt nhẹ cho các ô nhập liệu (tùy chọn) */
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -159,7 +156,6 @@ body {
 @media (max-width: 767.98px) {
     .auth-card__image-container {
         height: 250px;
-        /* Trên mobile ảnh nằm trên và có chiều cao cố định */
     }
 
     .auth-card__form {

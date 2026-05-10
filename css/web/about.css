@@ -1,0 +1,26 @@
+.about-page {
+    background: var(--bg-main);
+}
+
+.about-page__main {
+    padding-top: 170px;
+}
+
+.about-page__title {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.about-page__story {
+    font-family: var(--font-body);
+    font-size: 26px;
+}
+
+.about-member {
+    max-width: 300px;
+}
+
+.about-member__avatar {
+    object-fit: cover;
+}

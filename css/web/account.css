@@ -50,12 +50,20 @@
 
 }
 
+body {
+    background-color: var(--bg-main);
+}
+
 .account-page {
     /* padding-top:180px; */
     padding: 180px 15px !important;
     max-width: 1400px;
     margin: 0 !important;
 
+}
+
+.breadcrumb-item {
+    font-family: var(--font-body);
 }
 
 .account-page__title {
@@ -152,8 +160,9 @@
     transform: translateY(4px);
 }
 
-/* Nút Cập nhật (Sử dụng ID hoặc class tùy bạn đặt) */
-#btnCapNhat {
+/* Nút Cập nhật */
+#btnCapNhatProfile,
+#btnDoiPass {
     background-color: var(--button-color);
     /* Màu tím */
     border: 2px solid var(--border-color);
@@ -167,7 +176,8 @@
     cursor: pointer;
 }
 
-#btnCapNhat:hover {
+#btnCapNhatProfile:hover,
+#btnDoiPass:hover {
     background-color: var(--primary-hover);
     transform: translate(-2px, -2px);
     /* Nhích lên trên bên trái */
@@ -175,16 +185,16 @@
     /* Bóng dày hơn khi hover */
 }
 
-#btnCapNhat:active {
+#btnCapNhatProfile:active,
+#btnDoiPass:active {
     transform: translate(2px, 2px);
     /* Lún xuống khi nhấn */
     box-shadow: 0px 0px 0px 0px var(--shadow-card);
 }
 
-/* Nút Hủy (Nút phụ - thường dùng màu nhạt hoặc viền không bóng quá đậm) */
-#btnHuy {
+#btnHuyProfile,
+#btnHuyPass {
     background-color: #f1f1f1;
-    /* Một màu xám nhẹ */
     border: 2px solid var(--border-color);
     font-family: var(--font-heading);
     font-weight: 700;
@@ -197,13 +207,15 @@
     cursor: pointer;
 }
 
-#btnHuy:hover {
+#btnHuyProfile:hover,
+#btnHuyPass:hover {
     background-color: #e2e2e2;
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0px 0px #ccc;
 }
 
-#btnHuy:active {
+#btnHuyProfile:active,
+#btnHuyPass:active {
     transform: translate(2px, 2px);
     box-shadow: 0px 0px 0px 0px #ccc;
 }

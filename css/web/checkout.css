@@ -1,0 +1,209 @@
+body {
+    background-color: var(--bg-main);
+}
+
+.checkout-page {
+    padding: 180px 30px !important;
+    max-width: 1400px;
+    margin: 0 !important;
+
+}
+
+.breadcrumb-item {
+    font-family: var(--font-body);
+}
+
+.checkout__title {
+    font-family: var(--font-title);
+    color: var(--text-title);
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.checkout-section {
+    background-color: var(--bg-white);
+    border-radius: 25px;
+    padding: 25px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0px 4px 10px var(--shadow-color);
+    /* #A757E9 với độ mờ 25% */
+    border: 1px solid rgba(167, 87, 233, 0.25);
+    border-radius: 30px;
+
+}
+
+.checkout-section__title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.checkout-section__icon {
+    margin-right: 8px;
+    color: var(--text-dark);
+}
+
+/* BLOCK: checkout-field */
+.checkout-field__label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+}
+
+.checkout-field__required {
+    color: #ff0019;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.checkout-field__input,
+.checkout-field__select,
+.checkout-field__textarea {
+    outline: none;
+    border: 2px solid var(--border-color) !important;
+    box-shadow: 3px 4px 0px 0px #6C4ED9 !important;
+    padding: 12px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: 0.3s;
+    font-family: var(--font-body);
+
+}
+
+.checkout-field__input:focus,
+.checkout-field__select:focus,
+.checkout-field__textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 1px 2px 0px var(--shadow-card);
+    transform: translateY(4px);
+
+}
+
+/* BLOCK: payment-method */
+.payment-method {
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-family: var(--font-heading);
+
+}
+
+.payment-method:hover {
+    background-color: var(--button-phu);
+}
+
+.payment-method__radio {
+    margin-right: 15px;
+    accent-color: var(--primary-color);
+    width: 20px;
+    height: 20px;
+}
+
+.payment-method__label {
+    margin-bottom: 0;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+/* BLOCK: order-summary */
+.order-summary {
+    background-color: var(--bg-white);
+    border-radius: 25px;
+    padding: 30px;
+    border: 2px solid var(--border-color);
+}
+
+.order-summary__header {
+    font-family: var(--font-heading);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+
+.order-item__img {
+    width: 65px;
+    height: 65px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.order-item__name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding-right: 10px;
+}
+
+.order-item__price {
+    font-weight: 700;
+    color: var(--price-color);
+}
+
+
+.price-list__row {
+    margin-bottom: 10px;
+}
+
+.price-list__row--total {
+    margin-top: 15px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+
+.btn-submit {
+    background-color: var(--button-color);
+    border: 2px solid var(--border-color);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    color: var(--text-light);
+    box-shadow: 4px 4px 0px 0px #6C4ED9;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-hover);
+    transform: translate(-2px, -2px);
+    /* Nhích lên trên bên trái */
+    box-shadow: 6px 6px 0px 0px var(--shadow-card);
+}
+
+.btn-submit:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px var(--shadow-card);
+}
+
+#btnConfirmTransfer {
+    background-color: var(--button-phu);
+    border: 2px solid var(--border-color);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 3px 4px 0px 1px var(--shadow-card);
+}
+
+#btnConfirmTransfer:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    transform: translateY(-3px);
+    border: none;
+    box-shadow: 1px 2px 0px var(--shadow-card);
+}
+
+#btnConfirmTransfer:active {
+    transform: translateY(0);
+    box-shadow: 1px 2px 0px var(--shadow-card);
+}

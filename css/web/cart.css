@@ -1,0 +1,64 @@
+        .cart-title{
+            font-family: var(--font-title);
+            color: var(--text-title);
+            font-size:40px ;
+        }
+        .cart-item {
+            border-bottom: 1px var(--bg-white);
+            padding: 15px 0;
+            font-family: var(--font-heading);
+        }
+
+        .cart-img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        .cart-container {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .cart-empty img {
+            width: 120px;
+            opacity: 0.7;
+        }
+
+        .summary-box {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 20px;
+            font-family: var(--font-heading);
+
+        }
+
+        #btnTienHanhThanhToan,#btnTroVe {
+            width: 100%;
+            background-color: var(--button-phu);
+            border: 2px solid var(--border-color);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            padding: 12px;
+            border-radius: 12px;
+            transition: 0.3s;
+            box-shadow: 3px 4px 0px 1px var(--shadow-card);
+        }
+
+        #btnTienHanhThanhToan:hover ,#btnTroVe:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+            border: none;
+            box-shadow: 1px 2px 0px var(--shadow-card);
+
+        }
+
+        #btnTienHanhThanhToan:active ,#btnTroVe:active {
+            transform: translateY(0);
+            box-shadow: 1px 2px 0px var(--shadow-card);
+        }

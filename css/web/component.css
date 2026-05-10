@@ -14,10 +14,12 @@
     /* tím chủ đạo */
     --primary-hover: #5A3FC0;
     /* hover button */
-
+    --secondary-color: #A463F2;
+    /* màu phụ */
     /* BUTTON */
     --button-color: #6C4ED9;
     --button-hover: #5A3FC0;
+    --button-phu: rgba(167, 87, 233, 0.25);
 
     /* TEXT */
     --text-dark: #2F2F2F;
@@ -34,8 +36,9 @@
     --border-color: #2F2F2F;
     /* viền card */
     --shadow-color: rgba(0, 0, 0, 0.1);
-    --shadow-card: 0px 4px 12px #6C4ED9;
-    /* bóng tím cho card */
+    --shadow-card: #6C4ED9;
+    --border-card: rgba(167, 87, 233, 0.25);
+
     /* FONT */
     --font-title: 'Coiny';
     /* tiêu đề cute */
@@ -101,9 +104,8 @@
     color: var(--text-dark);
     box-shadow: 0 0 5px var(--button-color), 0 0 0 10px rgba(108, 78, 217, 0.1);
     transition: .3s ease;
-    /* padding: 
-    border-radius: 20px;
-    border: 1px solid #ccc; */
+    font-family: var(--font-body);
+
 }
 
 /* ACTIONS */
@@ -160,7 +162,6 @@
 .header__dropdown-item {
     background: var(--bg-white) !important;
     font-size: 20px;
-    /* chữ to giống mẫu */
     font-weight: 500 !important;
     margin-bottom: 5px !important;
     color: var(--primary-color) !important;
@@ -180,19 +181,18 @@
 }
 /* Hiệu ứng trượt và mờ dần cho Dropdown */
 .dropdown-menu.header__dropdown {
-    display: block; /* Ép hiển thị để quản lý bằng opacity */
+    display: block; 
     visibility: hidden;
     opacity: 0;
-    transform: translateY(20px); /* Đẩy menu xuống 20px */
+    transform: translateY(20px); 
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     pointer-events: none; /* Không cho click khi đang ẩn */
 }
 
-/* Khi nhấn vào nút (Bootstrap thêm class .show vào menu) */
 .dropdown-menu.header__dropdown.show {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0); /* Trượt về vị trí cũ */
+    transform: translateY(0); 
     pointer-events: auto;
 }
 /* NAV */

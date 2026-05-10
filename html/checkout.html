@@ -1,1 +1,193 @@
-<!-- đây là trang thanh toán  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANH TOÁN</title>
+    <link rel="stylesheet" href="/css/web/component.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/web/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/js/web/jquery-4.0.0.js"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="container-fluid checkout-page ">
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+            aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-dark text-decoration-none" href="/html/index.html">Trang
+                        Chủ</a></li>
+                <li class="breadcrumb-item"><a class="text-dark text-decoration-none" href="/html/cart.html">Giỏ
+                        Hàng</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Thanh Toán</li>
+            </ol>
+        </nav>
+        <div class="checkout__title">
+            <h1>THANH TOÁN</h1>
+        </div>
+        <div class="row g-4 ">
+            <div class="col-lg-7">
+
+                <section class="checkout-section mb-4">
+                    <h5 class="checkout-section__title">
+                        <i class="fa-regular fa-circle-user checkout-section__icon"></i> Thông tin người nhận
+                    </h5>
+                    <div class="checkout-section__form">
+                        <div class="checkout-field mb-3">
+                            <label class="checkout-field__label">Họ và tên <span id="errHoTen"
+                                    class="checkout-field__required">*</span></label>
+                            <input type="text" class="checkout-field__input form-control" placeholder="Nhập họ và tên"
+                                id="txtHoTen">
+                        </div>
+                        <div class="checkout-field mb-3">
+                            <label class="checkout-field__label">Số điện thoại <span id="errSDT"
+                                    class="checkout-field__required">*</span></label>
+                            <input type="text" class="checkout-field__input form-control"
+                                placeholder="Nhập số điện thoại" id="txtSDT">
+                        </div>
+                        <div class="checkout-field mb-3">
+                            <label class="checkout-field__label">Email <span id="errEmail"
+                                    class="checkout-field__required">*</span></label>
+                            <input type="email" class="checkout-field__input form-control" placeholder="Nhập email"
+                                id="txtEmail">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="checkout-section mb-4">
+                    <h5 class="checkout-section__title">
+                        <i class="fa-solid fa-location-dot checkout-section__icon"></i> Địa chỉ giao hàng
+                    </h5>
+                    <div class="checkout-section__form row g-3">
+                        <div class="col-12 checkout-field">
+                            <label class="checkout-field__label">Địa chỉ <span id="errDiaChi"
+                                    class="checkout-field__required">*</span></label>
+                            <input type="text" class="checkout-field__input form-control"
+                                placeholder="Số nhà, tên đường..." id="txtDiaChi">
+                        </div>
+                        <div class="col-md-6 checkout-field">
+                            <label class="checkout-field__label">
+                                Phường <span class="checkout-field__required">*</span>
+                            </label>
+                            <select id="ward" class="checkout-field__select form-select">
+                                <option value="" selected disabled>Chọn phường</option>
+                                <option value="p1">Phường 1</option>
+                                <option value="p2">Phường 2</option>
+                                <option value="p3">Phường 3</option>
+                                <option value="p4">Phường 4</option>
+                                <option value="p5">Phường 5</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 checkout-field">
+                            <label class="checkout-field__label">
+                                Thành Phố <span class="checkout-field__required">*</span>
+                            </label>
+                            <select id="city" class="checkout-field__select form-select">
+                                <option value="" selected disabled>Chọn thành phố</option>
+                                <option value="hcm">TP Hồ Chí Minh</option>
+                                <option value="hanoi">Hà Nội</option>
+                                <option value="danang">Đà Nẵng</option>
+                                <option value="cantho">Cần Thơ</option>
+                                <option value="haiphong">Hải Phòng</option>
+                            </select>
+                        </div>
+                        <div class="col-12 checkout-field">
+                            <label class="checkout-field__label">Ghi chú (tùy chọn)</label>
+                            <textarea class="checkout-field__textarea form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="checkout-section">
+                    <h5 class="checkout-section__title">
+                        <i class="fa-solid fa-circle-dot checkout-section__icon"></i> Phương thức thanh toán
+                    </h5>
+                    <div class="payment-group">
+                        <div class="payment-method payment-method--active">
+                            <input class="payment-method__radio" type="radio" name="pay" id="c1" checked>
+                            <label class="payment-method__label" for="c1">Thanh toán khi nhận hàng (COD)</label>
+                        </div>
+                        <div class="payment-method">
+                            <input class="payment-method__radio" type="radio" name="pay" id="c2">
+                            <label class="payment-method__label" for="c2">Thanh toán chuyển khoản ngân hàng</label>
+                            <!-- MODAL CHUYỂN KHOẢN -->
+                            <div class="modal fade" id="bankModal" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content p-4">
+
+                                        <h5 class="text-center mb-3">Thanh Toán Bằng Phương Thức Chuyển Khoản</h5>
+
+                                        <div class="text-center mb-3">
+                                            <img src="/assets/images/ma-qr.png" class="img-fluid qr-img" alt="QR Code">
+                                        </div>
+
+                                        <p><b>Tên tài khoản:</b> HO KINH DOANH PET JOY</p>
+                                        <p><b>Tài Khoản:</b> TECHCOMBANK 1907 4811 4380 19</p>
+                                        <p><b>Số tiền:</b> <span id="modalMoney"></span></p>
+
+                                        <div class="mb-3">
+                                            <label>Nội dung chuyển khoản</label>
+                                            <input type="text" id="transferNote" class="form-control">
+                                        </div>
+
+                                        <button id="btnConfirmTransfer" class="btn w-100">
+                                            Xác nhận đã chuyển khoản
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-lg-5">
+                <aside class="order-summary" style="top: 20px;">
+                    <h3 class="order-summary__header">ĐƠN HÀNG CỦA BẠN</h3>
+                    <div id="orderList">
+                        <div class="order-item d-flex">
+                            <img src="/assets/images/products/5Plus.png" alt="Product" class="order-item__img">
+                            <div class="order-item__info ms-3 flex-grow-1">
+                                <div class="d-flex justify-content-between">
+                                    <span class="order-item__name" id="TenSp"> </span>
+                                    <span class="order-item__price" id="GiaSP"></span>
+                                </div>
+                                <small class="order-item__meta text-secondary" id="moTaSp"></small>
+                            </div>
+                        </div>
+
+                        <hr class="order-summary__divider">
+                    </div>
+                    <div class="price-list">
+                        <div class="price-list__row d-flex justify-content-between">
+                            <span>Tạm tính:</span> <span id="tamTinh"></span>
+                        </div>
+                        <div class="price-list__row d-flex justify-content-between">
+                            <span>Phí vận chuyển:</span> <span id="phiShip"></span>
+                        </div>
+                        <div class="price-list__row d-flex justify-content-between price-list__row--total">
+                            <span>Tổng cộng:</span> <span id="tongCong"></span>
+                        </div>
+                    </div>
+
+                    <button id="btnThanhToan" class="btn-submit w-100 mt-4">Thanh Toán Ngay</button>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+
+    <script src="/js/bootstrap/bootstrap.bundle.js"></script>
+    <script src="/js/web/loadComponent.js"></script>
+    <script src="/js/web/checkout.js"></script>
+    <script src="/js/web/add-to-cart.js"></script>
+</body>
+
+</html>

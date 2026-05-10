@@ -1,1 +1,86 @@
-<!-- Đây là trang liên hệ -->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIÊN HỆ</title>
+
+    <link rel="stylesheet" href="../css/web/component.css">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/web/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../js/web/jquery-4.0.0.js"></script>
+</head>
+
+<body style="background-color: var(--bg-main);">
+
+    <div id="header"></div>
+
+    <main class="container contact__main">
+
+        <div class="row justify-content-center align-items-center g-5">
+
+            <div class="col-lg-5 col-md-6 col-12">
+                <div class="contact__box">
+
+                    <h2 class="contact__title text-center mb-4">LIÊN HỆ</h2>
+
+                    <form id="contactForm">
+
+                        <div class="mb-3">
+                            <label class="form-label">Họ và tên</label>
+                            <input id="fullName" type="text" class="form-control" placeholder="Nhập họ tên...">
+                            <small id="nameError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email của bạn</label>
+                            <input id="email" type="text" class="form-control" placeholder="example@gmail.com">
+                            <small id="emailError" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tin nhắn</label>
+                            <textarea id="message" rows="4" class="form-control"
+                                placeholder="Nhập nội dung..."></textarea>
+                            <small id="msgError" class="text-danger"></small>
+                        </div>
+
+                        <button id="submitBtn" type="submit" class="btn contact__btn w-100">
+                            LIÊN HỆ
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="contact__image-box">
+
+                    <!-- <img src="../assets/images/home/diachi.png" class="img-fluid contact__image"> -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.858169091622!2d106.6842651100549!3d10.822164158305018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1778080778603!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div id="footer" class="mt-5"></div>
+
+    <script src="../js/bootstrap/bootstrap.bundle.js"></script>
+    <script src="../js/web/loadComponent.js"></script>
+    <script src="../js/web/contact.js"></script>
+    <script src="/js/web/add-to-cart.js"></script>
+
+</body>
+
+</html>
