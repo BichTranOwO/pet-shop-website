@@ -173,7 +173,7 @@ $(document).ready(function () {
 
       $("#modalMoney").text(total);
 
-      // 👉 AUTO NỘI DUNG CHUYỂN KHOẢN
+      //  AUTO NỘI DUNG CHUYỂN KHOẢN
       let name = $("#txtHoTen").val().trim();
       let phone = $("#txtSDT").val().trim();
 
