@@ -15,7 +15,7 @@ $(document).ready(function () {
   }
 
   // ===== LOAD HEADER + XỬ LÝ LOGIN =====
-  loadComponent("header", "./components/header.html", function () {
+  loadComponent("header", "/html/components/header.html", function () {
     updateCartCount();
 
     let isLogin = localStorage.getItem("isLogin");
@@ -42,7 +42,7 @@ $(document).ready(function () {
   });
 
   // ===== LOAD FOOTER =====
-  loadComponent("footer", "./components/footer.html");
+  loadComponent("footer", "/html/components/footer.html");
 
   // ===== LOGOUT =====
   $(document).on("click", "#logout", function () {

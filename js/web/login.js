@@ -65,7 +65,7 @@ $(document).ready(function () {
     localStorage.setItem("isLogin", "true");
 
     alert("Đăng nhập thành công ");
-    window.location.href = "/html/index.html";
+    window.location.href = "/index.html";
   });
 
 });
